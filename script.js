@@ -3,11 +3,11 @@ const output = document.getElementById("text-2");
 
 const copiedBanner = document.querySelector(".copied-banner");
 
-let template = `🔥 ‎ ‎ ‎ ‎ ‎🔥🔥🔥
-  🔥 ‎ ‎ ‎ ‎ ‎ ‎🔥
-  🔥🔥🔥🔥🔥
-  ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎   ‎🔥 ‎ ‎ ‎ ‎   ‎🔥
-  🔥🔥🔥 ‎ ‎ ‎   ‎🔥`
+let template = `🪖 ‎ ‎ ‎ ‎ ‎🪖🪖🪖
+🪖 ‎ ‎ ‎ ‎ ‎ ‎🪖
+🪖🪖🪖🪖🪖
+  ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎  🪖 ‎ ‎ ‎ ‎ 🪖
+🪖🪖🪖 ‎ ‎ ‎   ‎🪖`
 
 function selectText(text) {
   text.focus();
@@ -37,7 +37,7 @@ function createEmojiArt() {
   let index = 0;
 
   for (let i = 0; i < 17; i++) {
-    temp = temp.replace("🔥", emojis[index]);
+    temp = temp.replace("🪖", emojis[index]);
 
     if (index == emojis.length - 1) index = 0;
     else index++;
