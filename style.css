@@ -1,0 +1,153 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  background-color: black;
+  color: white;
+  font-family: arial;
+  position: relative;
+}
+
+body > * {
+  width: 70%;
+}
+
+.copied-banner {
+  width: 100%;
+  height: 50px;
+  background-color: #0057ae;
+  font-weight: bold;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  height: 0;
+}
+
+.clicked {
+  animation: growUpAndDown 2s ease-out;
+}
+
+@keyframes growUpAndDown {
+  0%, 100% {
+    height: 0;
+  }
+  25% {
+    height: 50px;
+  }
+  75% {
+    height: 50px;
+  }
+}
+
+textarea {
+  width: 100%;
+  height: 30vh;
+  border-radius: 5px;
+  font-family: inherit;
+  resize: none;
+  outline: none;
+  border: none;
+  color: white;
+  background-color: black;
+  padding: 10px;
+}
+
+button {
+  color: inherit;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  color: #ccc;
+}
+
+button:active {
+  color: #8a8a8a;
+}
+
+.language-div {
+  height: 40px;
+  display: flex;
+}
+
+.language-div > *:not(.l-s-div) {
+  flex: 1;
+}
+
+.language-name-div {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.language-name-div:last-child {
+  justify-content: flex-start;
+}
+
+.language-name {
+  width: 40%;
+  height: 100%;
+  background-color: #212121;
+  font-size: 1em;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: default;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+@media only screen and (max-width: 700px) {
+  .language-name {
+    width: 100%;
+  }
+}
+
+.l-s-div {
+  display: flex;
+  justify-content: center;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.language-switcher {
+  height: 100%;
+  aspect-ratio: 1;
+  background-color: transparent;
+  background-color: #151515;
+  font-size: 1.3em;
+  padding: 5px;
+  border-radius: 50%;
+}
+
+#text-1 {
+  font-size: 1.2em;
+}
+
+#text-2 {
+  font-size: 1.4em;
+  cursor: pointer;
+}
+
+#text-2:hover {
+  background-color: #0f0f0f;
+}
+
+#text-2:active {
+  background-color: #141414;
+}
