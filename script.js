@@ -33,13 +33,33 @@ function createEmojiArt() {
 
   emojis = splitEmojis(input.value);
 
+  let seeking = false;
+
+  let newEmojis = [];
+
+  for (let i = 0; i < emojis.length; i++) {
+      let char = emojis[i];
+
+      if (seeking) {
+          newEmojis[newEmojis.length - 1] = newEmojis[newEmojis.length - 1] + char;
+      }
+      else {
+          newEmojis.push(char);
+      }
+
+      if (char === ":") {
+          if (seeking) seeking = false;
+          else seeking = true;
+      }
+  }
+
   let temp = template;
   let index = 0;
 
   for (let i = 0; i < 17; i++) {
-    temp = temp.replace("🪖", emojis[index]);
+    temp = temp.replace("🪖", newEmojis[index]);
 
-    if (index == emojis.length - 1) index = 0;
+    if (index == newEmojis.length - 1) index = 0;
     else index++;
   }
 
